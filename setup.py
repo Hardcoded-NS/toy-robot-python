@@ -1,7 +1,7 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+#!/usr/bin/env python3
+import sys
+
+from setuptools import setup, find_packages
 
 config = {
     'description': 'Toy Robot',
@@ -11,8 +11,8 @@ config = {
     'author_email': 'lauchlin@lauchlin.com',
     'version': '0.1',
     'install_requires': [],
-    'packages': ['toyrobot'],
-    'scripts': [],
+    'packages': find_packages('.', exclude=['tests*']),
+    'scripts': ['bin/toy-robot'],
     'name': 'toyrobot'
 }
 

@@ -1,6 +1,6 @@
-from robot import Robot
-from point import Point
-from table import Table
+from toyrobot.robot import Robot
+from toyrobot.point import Point
+from toyrobot.table import Table
 from re import compile,X
 from sys import exit,argv
 
@@ -29,9 +29,3 @@ def main(file):
             elif m is not None and hasattr(robot,m.group("cmd").lower()):
                 robot = getattr(robot,m.group("cmd").lower())()
 
-
-if __name__ == '__main__':
-    if len(argv) == 2:
-        exit(main(argv[1]))
-    else:
-        print("usage: ")

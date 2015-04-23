@@ -1,5 +1,5 @@
 from math import pi,sin,cos
-from point import Point
+from toyrobot.point import Point
 
 class Robot(object):
 
